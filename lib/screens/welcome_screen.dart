@@ -1,3 +1,4 @@
+import 'package:fitness_app/screens/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -48,7 +49,7 @@ class _Welcome_screenState extends State<Welcome_screen> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.only(left: 10),
                       child: Text(
                         'ABOUT ME',
                         style: GoogleFonts.lato(
@@ -64,7 +65,7 @@ class _Welcome_screenState extends State<Welcome_screen> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.only(left: 10),
                       child: Text(
                         'we want to know more about  you ,\n follow the next steps to comp',
                         style: GoogleFonts.lato(
@@ -154,7 +155,12 @@ class _Welcome_screenState extends State<Welcome_screen> {
                         decoration: BoxDecoration(
                             color: Colors.green,
                             borderRadius: BorderRadius.circular(10)),
-                        child: IconButton(onPressed: () {}, icon: Text('NEXT')),
+                        child: IconButton(
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => homescreen()));
+                            },
+                            icon: Text('NEXT')),
                       ),
                     ),
                   ],
