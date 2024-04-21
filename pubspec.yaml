@@ -64,6 +64,7 @@ flutter:
     - lib/images/1.jpg
     - lib/images/2.jpg
     - lib/images/3.jpg
+    - lib/images/one.jpg
 
   #   - images/a_dot_ham.jpeg
 
