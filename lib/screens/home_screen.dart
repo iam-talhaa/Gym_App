@@ -12,9 +12,11 @@ class _homescreenState extends State<homescreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        height: double.infinity,
+        width: double.infinity,
         decoration: BoxDecoration(
-            color: Colors.teal,
-            image: DecorationImage(image: AssetImage('assetName'))),
+            image: DecorationImage(
+                fit: BoxFit.cover, image: AssetImage('lib/images/3.jpg'))),
       ),
     );
   }

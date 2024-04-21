@@ -138,15 +138,18 @@ class _Welcome_screenState extends State<Welcome_screen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 20),
-                      child: Text(
-                        "SKIP",
-                        style: GoogleFonts.lato(
-                            color: Colors.white30,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400),
-                      ),
-                    ),
+                        padding: const EdgeInsets.only(left: 20),
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Text(
+                            
+                            "SKIP",
+                            style: GoogleFonts.lato(
+                                color: Colors.white30,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400),
+                          ),
+                        )),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 10, right: 20),
                       child: Container(
