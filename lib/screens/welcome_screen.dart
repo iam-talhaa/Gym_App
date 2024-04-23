@@ -13,10 +13,10 @@ class Welcome_screen extends StatefulWidget {
 
 class _Welcome_screenState extends State<Welcome_screen> {
   final List<String> levels = [
-    'In_Active',
-    'BEGINNER',
-    'expert',
-    'outstanding'
+    "Active",
+    "Beginner",
+    "Expert",
+    "Outstanding",
   ];
   @override
   Widget build(BuildContext context) {
@@ -92,15 +92,15 @@ class _Welcome_screenState extends State<Welcome_screen> {
                   child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemCount: levels.length,
-                      itemBuilder: (BuildContext context, child) {
+                      itemBuilder: (BuildContext context, index) {
                         return Padding(
-                          padding: const EdgeInsets.only(left: 5),
+                          padding: EdgeInsets.only(left: 5),
                           child: Container(
                             child: Column(
                               children: [
                                 Padding(
                                   padding:
-                                      const EdgeInsets.only(left: 0, top: 50),
+                                      const EdgeInsets.only(left: 10, top: 50),
                                   child: Align(
                                     alignment: Alignment.topLeft,
                                     child: Text(
@@ -117,11 +117,11 @@ class _Welcome_screenState extends State<Welcome_screen> {
                                 ),
                                 Padding(
                                   padding:
-                                      const EdgeInsets.only(left: 0, top: 0),
+                                      const EdgeInsets.only(left: 10, top: 0),
                                   child: Align(
                                     alignment: Alignment.topLeft,
                                     child: Text(
-                                      "$levels",
+                                      levels[index],
                                       style: GoogleFonts.lato(
                                           color: Colors.green,
                                           fontSize: 30,
@@ -134,11 +134,14 @@ class _Welcome_screenState extends State<Welcome_screen> {
                                 ),
                                 Align(
                                   alignment: Alignment.topLeft,
-                                  child: Text(
-                                    'i have Never Trained',
-                                    style: GoogleFonts.lato(
-                                      fontSize: 16,
-                                      color: Colors.white,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 10),
+                                    child: Text(
+                                      'i have Never Trained',
+                                      style: GoogleFonts.lato(
+                                          fontSize: 18,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   ),
                                 )

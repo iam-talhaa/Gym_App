@@ -13,7 +13,7 @@ class homescreen extends StatefulWidget {
 }
 
 class _homescreenState extends State<homescreen> {
-  final List<String> catogories = [
+  List<String> catogories = [
     "lib/images/p1.jpg",
     "lib/images/p2.jpg",
     "lib/images/p3.jpg",
@@ -213,21 +213,17 @@ class _homescreenState extends State<homescreen> {
                   scrollDirection: Axis.horizontal,
                   itemCount: 3,
                   itemBuilder: (BuildContext context, index) {
-                    return Container(
-                      height: 200,
-                      width: 200,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15)),
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 5),
-                        child: Container(
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15)),
-                          child: Image(
-                              fit: BoxFit.cover,
-                              image: AssetImage(catogories[index])),
-                        ),
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 5),
+                      child: Container(
+                        height: 180,
+                        width: 180,
+                        decoration: BoxDecoration(
+                            //color: Colors.black,
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Image(
+                            fit: BoxFit.cover,
+                            image: AssetImage(catogories[index])),
                       ),
                     );
                   }),
