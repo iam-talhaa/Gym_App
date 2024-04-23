@@ -18,7 +18,7 @@ class _Gym_appState extends State<Gym_app> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: homescreen(),
+      home: Welcome_screen(),
     );
   }
 }

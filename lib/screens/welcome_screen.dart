@@ -12,7 +12,12 @@ class Welcome_screen extends StatefulWidget {
 }
 
 class _Welcome_screenState extends State<Welcome_screen> {
-  final List levels = ['In_Active', 'BEGINNER', 'expert', 'outstanding'];
+  final List<String> levels = [
+    'In_Active',
+    'BEGINNER',
+    'expert',
+    'outstanding'
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -108,6 +113,23 @@ class _Welcome_screenState extends State<Welcome_screen> {
                                   ),
                                 ),
                                 SizedBox(
+                                  height: 0,
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(left: 0, top: 0),
+                                  child: Align(
+                                    alignment: Alignment.topLeft,
+                                    child: Text(
+                                      "$levels",
+                                      style: GoogleFonts.lato(
+                                          color: Colors.green,
+                                          fontSize: 30,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
                                   height: 20,
                                 ),
                                 Align(
@@ -142,7 +164,6 @@ class _Welcome_screenState extends State<Welcome_screen> {
                         child: IconButton(
                           onPressed: () {},
                           icon: Text(
-                            
                             "SKIP",
                             style: GoogleFonts.lato(
                                 color: Colors.white30,

@@ -13,10 +13,10 @@ class homescreen extends StatefulWidget {
 }
 
 class _homescreenState extends State<homescreen> {
-  List catogories = [
-    my_images(Image_Url: 'lib/images/p1.jpg', Image_Name: 'example'),
-    my_images(Image_Url: 'lib/images/p2.jpg', Image_Name: 'example'),
-    my_images(Image_Url: 'lib/images/p3.jpg', Image_Name: 'example'),
+  final List<String> catogories = [
+    "lib/images/p1.jpg",
+    "lib/images/p2.jpg",
+    "lib/images/p3.jpg",
   ];
   @override
   Widget build(BuildContext context) {
@@ -217,9 +217,18 @@ class _homescreenState extends State<homescreen> {
                       height: 200,
                       width: 200,
                       decoration: BoxDecoration(
-                          color: Colors.blue,
                           borderRadius: BorderRadius.circular(15)),
-                      child: Image(image: AssetImage(catogories.first)),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 5),
+                        child: Container(
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15)),
+                          child: Image(
+                              fit: BoxFit.cover,
+                              image: AssetImage(catogories[index])),
+                        ),
+                      ),
                     );
                   }),
             ),
