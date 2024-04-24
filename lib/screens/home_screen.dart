@@ -13,8 +13,9 @@ class homescreen extends StatefulWidget {
 }
 
 class _homescreenState extends State<homescreen> {
-  List<String> catogories = [
+  final List<String> catogories = [
     "lib/images/p1.jpg",
+    "lib/images/1.jpg",
     "lib/images/p2.jpg",
     "lib/images/p3.jpg",
   ];
@@ -43,7 +44,13 @@ class _homescreenState extends State<homescreen> {
                             shape: BoxShape.circle,
                             border: Border.all(color: Colors.green, width: 2)),
                         child: CircleAvatar(
-                          backgroundColor: Color.fromARGB(255, 104, 140, 158),
+                          child: Text(
+                            "T",
+                            style: GoogleFonts.sofadiOne(fontSize: 34),
+                          ),
+                          minRadius: 45,
+                          maxRadius: 45,
+                          backgroundImage: AssetImage('lib/images/my.jpg'),
                         ),
                       ),
                     ),
@@ -208,16 +215,16 @@ class _homescreenState extends State<homescreen> {
             Container(
               width: double.infinity,
               decoration: BoxDecoration(),
-              height: 200,
+              height: 160,
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: 3,
+                  itemCount: catogories.length,
                   itemBuilder: (BuildContext context, index) {
                     return Padding(
                       padding: const EdgeInsets.only(left: 5),
                       child: Container(
-                        height: 180,
-                        width: 180,
+                        height: 160,
+                        width: 150,
                         decoration: BoxDecoration(
                             //color: Colors.black,
                             borderRadius: BorderRadius.circular(20)),
@@ -228,6 +235,36 @@ class _homescreenState extends State<homescreen> {
                     );
                   }),
             ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      child: Center(
+                        child: Text(
+                          'Purchase \$ ',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                      ),
+                      height: 50,
+                      width: 189,
+                      decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(17)),
+                    ),
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
