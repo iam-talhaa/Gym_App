@@ -1,4 +1,5 @@
 import 'package:fitness_app/screens/home_screen.dart';
+import 'package:fitness_app/screens/purchase.dart';
 import 'package:fitness_app/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class _Gym_appState extends State<Gym_app> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: homescreen(),
+      home: purchase_screen(),
     );
   }
 }
