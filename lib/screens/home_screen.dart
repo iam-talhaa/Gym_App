@@ -36,7 +36,7 @@ class _homescreenState extends State<homescreen> {
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 20, left: 20),
+                      padding: const EdgeInsets.only(top: 10, left: 20),
                       child: Container(
                         height: 50,
                         width: 50,
@@ -55,7 +55,7 @@ class _homescreenState extends State<homescreen> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 20, left: 20),
+                      padding: const EdgeInsets.only(top: 10, left: 20),
                       child: Text('Hey,',
                           style: GoogleFonts.bebasNeue(
                               letterSpacing: 2,
@@ -63,7 +63,7 @@ class _homescreenState extends State<homescreen> {
                               color: Colors.white)),
                     ),
                     Padding(
-                        padding: const EdgeInsets.only(top: 20),
+                        padding: const EdgeInsets.only(top: 10),
                         child: Text('TALHA',
                             style: GoogleFonts.bebasNeue(
                                 letterSpacing: 2,
@@ -78,7 +78,7 @@ class _homescreenState extends State<homescreen> {
                 print('tab');
               },
               child: Padding(
-                padding: const EdgeInsets.only(top: 50),
+                padding: const EdgeInsets.only(top: 40),
                 child: Container(
                     height: 70,
                     width: 70,
@@ -107,7 +107,7 @@ class _homescreenState extends State<homescreen> {
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 70, left: 20),
+                      padding: const EdgeInsets.only(top: 60, left: 20),
                       child: Text('find  ',
                           style: GoogleFonts.bebasNeue(
                               letterSpacing: 2,
@@ -115,7 +115,7 @@ class _homescreenState extends State<homescreen> {
                               color: Colors.white)),
                     ),
                     Padding(
-                        padding: const EdgeInsets.only(top: 70),
+                        padding: const EdgeInsets.only(top: 60),
                         child: Text('Your Work',
                             style: GoogleFonts.bebasNeue(
                                 letterSpacing: 2,
@@ -124,7 +124,7 @@ class _homescreenState extends State<homescreen> {
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 70, right: 20),
+                  padding: const EdgeInsets.only(top: 60, right: 20),
                   child: Container(
                     height: 50,
                     width: 50,
@@ -140,16 +140,16 @@ class _homescreenState extends State<homescreen> {
               ],
             ),
             SizedBox(
-              height: 20,
+              height: 15,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
-                height: 65,
+                height: 55,
                 width: double.infinity,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: Colors.black),
+                    color: Color.fromARGB(107, 255, 249, 249)),
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Container(
@@ -161,6 +161,7 @@ class _homescreenState extends State<homescreen> {
                             color: Colors.white54,
                           ),
                           border: InputBorder.none,
+                          hintStyle: TextStyle(color: Colors.white),
                           hintText: 'Search'),
                     ),
                   ),
@@ -171,7 +172,7 @@ class _homescreenState extends State<homescreen> {
               height: 15,
             ),
             Container(
-              height: 50,
+              height: 40,
               width: double.infinity,
               decoration: BoxDecoration(),
               child: ListView.builder(
